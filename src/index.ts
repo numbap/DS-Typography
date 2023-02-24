@@ -6,12 +6,7 @@
  */
 // import "react-app-polyfill/ie11";
 
-import "./styles/tailwind.css";
-import "./styles/fonts.css";
-import "./styles/forms.css";
-import "./styles/menu.css";
-import "./styles/header.css";
-import "./icomoon/style.css";
+import "./styles/index.scss";
 
 /**
  * layout components and navigational page elements

@@ -1,10 +1,6 @@
 import "../src/styles/tailwind.css";
-import "../src/styles/fonts.css";
-import "../src/styles/forms.css";
-import "../src/styles/header.css";
-import "../src/styles/menu.css";
-import "../src/styles/globals.css";
-import "../src/icomoon/style.css";
+import "../src/styles/index.scss";
+// import "../src/icomoon/style.css";
 import {
   INITIAL_VIEWPORTS,
   MINIMAL_VIEWPORTS,

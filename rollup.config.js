@@ -1,3 +1,4 @@
+import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import external from "rollup-plugin-peer-deps-external";
 import del from "rollup-plugin-delete";
@@ -8,7 +9,6 @@ import json from "@rollup/plugin-json";
 import image from "rollup-plugin-img";
 import url from "postcss-url";
 import typescript from "@rollup/plugin-typescript";
-import resolve from "@rollup/plugin-node-resolve";
 
 export default [
   {
@@ -34,18 +34,18 @@ export default [
             url: "inline",
           }),
         ],
-        config: {
-          path: "./postcss.config.js",
-        },
-        extensions: [".css"],
+
+        extensions: [".css", ".scss"],
         minimize: true,
-        inject: {
-          insertAt: "top",
-        },
+        extract: "index.css",
+        sourceMap: false,
+        inject: false,
       }),
       external(),
       resolve(),
-      typescript(),
+      typescript({
+        tsconfig: "./tsconfig.json",
+      }),
       terser(),
     ],
     // anything "external" will not be included into the generated bundle

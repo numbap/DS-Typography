@@ -6,6 +6,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./config-plugins/**/*.{js,ts,jsx,tsx}",
   ],
+  corePlugins: {
+    preflight: false,
+  },
   presets: [require("./tailwind-bootstrap3.js")],
   theme: {
     borderWidth: {

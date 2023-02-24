@@ -26,6 +26,8 @@
     "react-router-dom": "^6.7.0",
     "react-syntax-highlighter": "^15.5.0",
     "release-please": "^14.17.3",
+    "sass": "^1.58.3",
+    "sass-loader": "^10.4.1",
     "shelljs": "^0.8.5",
     "ts-jest": "^29.0.5",
     "user": "^0.0.0"
